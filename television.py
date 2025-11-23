@@ -21,7 +21,7 @@ class Television:
             self.__muted = not self.__muted
 
     def channel_up(self) -> None:
-
+        """Switch the channel up when the television is on."""
         if self.__status:
             if self.__channel == Television.MAX_CHANNEL:
                 self.__channel = Television.MIN_CHANNEL
@@ -29,7 +29,7 @@ class Television:
                 self.__channel += 1
 
     def channel_down(self) -> None:
-
+        """Switch the channel down when the television is on."""
         if self.__status:
             if self.__channel == Television.MIN_CHANNEL:
                 self.__channel = Television.MAX_CHANNEL
